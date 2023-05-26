@@ -1,0 +1,287 @@
+@font-face {
+    font-family: freak;
+    src: url(./src/font/FREAKGROTESK-NEXT-BOLD.OTF);
+}
+@font-face {
+    font-family: kolaka;
+    src: url(./src/font/Kolaka\ TTF\ Personal.ttf);
+}
+@font-face {
+    font-family: ocr;
+    src: url(./src/font/OCRASTD.OTF);
+}
+
+html,body{
+    font-family: ocr;
+    margin: 0;
+    background-color: #7da4c5;
+    color: white;
+    overflow-x: hidden;
+}
+
+h1{
+    font-family: kolaka;
+}
+
+section{
+    margin-bottom: 5vh;
+}
+
+li{
+    padding: 1vh;
+}
+
+.main{
+    margin-top: 10vh;
+    padding-right: 10vh;
+    /* position: relative; */
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    /* overflow: auto; */
+    max-width: 50vw;
+    margin-left: 50vw;
+}
+
+
+.dance{
+    top: 0;
+    left: 0;
+    min-height: 100vh;
+    min-width: 100vw;
+    /* z-index: -1; */
+    filter: hue-rotate(90deg);
+    background-image: url("./src/img/dance.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 0;
+}
+
+.title{
+    min-height: 100vh;
+    width: 50vh;
+    position: fixed;
+    top: 0;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    scroll-snap-align: start;
+    font-size: 125px;
+    padding: 0 10vh;
+    margin: 0;
+    filter: blur(3px);
+    animation: 2s blur ease-in-out infinite;
+}
+
+.data{
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    padding: 2vh;
+    margin: 10vh;
+    height: 5vh;
+    font-size: 24px;
+    width: auto;
+    color: black;
+}
+
+.data_bg{
+    position: fixed;
+    min-width: 10px;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    padding: 2vh;
+    margin: 10vh;
+    height: 5vh;
+    width: auto;
+    background-color: white;
+    filter: blur(3px);
+}
+
+.hl{
+    background-color: white;
+    color: black;
+}
+
+.quota{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgb(255, 255, 255);
+    height: 10vh;
+}
+
+.cartina{
+    font-size: 36px;
+}
+
+.quest{
+    display: flex;
+    flex-direction: column;
+    display: list-item;
+}
+
+#last{
+    width: 99%;
+    font-family: 'ocr';
+    border: none;
+    border-bottom: 1px solid white;
+    background: inherit;
+    color: white;
+    font-size: 18px;
+    outline: none;
+    margin-bottom: 2vh;
+}
+
+#last::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: white;
+    opacity: 0.5;
+}
+
+#submit{
+    width: 100%;
+    height: 42px!important;
+    margin: 0;
+    font-size: 14px;
+    border: none;
+    background-color: #7da4c5;
+    border: 1px solid white;
+    color: white;
+    font-family: 'ocr';
+}
+
+#submit:hover{
+    background-color: white;
+    color: #7da4c5;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(80, 186, 80);
+    color: white;
+    text-decoration: none;
+    height: 10vh;
+}
+
+.btn:hover{
+    background-color: rgb(255, 255, 255);
+    color: rgb(80, 186, 80);
+    height: 10vh;
+    font-size: large;
+    filter: blur(3px);
+    transition: all 0.2s ease-in-out;
+}
+
+.blink_me {
+    animation: blinker 0.1s linear infinite;
+}
+
+del{
+    opacity: 0.5;
+}
+
+  @keyframes blinker {
+    50% {
+      opacity: 0.5;
+    }
+  }
+
+@keyframes blur {
+    75% {
+      -webkit-filter: blur(7px);
+      -moz-filter: blur(7px);
+      -o-filter: blur(7px);
+      -ms-filter: blur(7px);
+    }
+  }
+
+
+  @media screen and (max-width: 1400px) {
+    .main{
+        width: 90vw;
+        max-width: 92vw;
+        margin-left: 0;
+        margin: 5vw;
+        margin-top: 10vw;
+    }
+
+    .data{
+        margin: 4vh;
+        font-size: 18px;
+    }
+    .data_bg{
+        margin: 4vh;
+    }
+
+    .dance{
+        animation: slide 3s ease-in-out infinite;
+    }
+
+    @keyframes slide {
+        25% {
+          background-position: 30% 0;
+        }
+        50% {
+          background-position: 60% 0;
+        }
+        75% {
+          background-position: 80% 0;
+        }
+      }
+
+    .title{
+      width: auto;
+      font-size: 8vw;
+      padding: 0;
+      padding-left: 5vh;
+      animation: levitate 1.5s linear infinite;
+      position: absolute;
+      top: 20%;
+      filter: blur(6px);
+    }
+
+    @keyframes levitate {
+
+        25% {
+          top: 22%;
+        }
+        50% {
+          top: 30%;
+          -webkit-filter: blur(2px);
+          -moz-filter: blur(2px);
+          -o-filter: blur(2px);
+          -ms-filter: blur(2px);
+        }
+        70%{
+            -webkit-filter: blur(2px);
+            -moz-filter: blur(2px);
+            -o-filter: blur(2px);
+            -ms-filter: blur(2px);
+        }
+
+      }
+
+}
+
+@media screen and (max-width: 600px) {
+    .title{
+        font-size: 15vw!important;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+  .title{
+      font-size: 8vw;
+    }
+  }
